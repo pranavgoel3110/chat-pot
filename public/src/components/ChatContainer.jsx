@@ -59,7 +59,7 @@ export default function ChatContainer({ currentChat, socket }) {
         setArrivalMessage({ fromSelf: false, message: msg });
       });
     }
-  }, []);
+  }, );
 
   useEffect(() => {
     arrivalMessage && setMessages((prev) => [...prev, arrivalMessage]);

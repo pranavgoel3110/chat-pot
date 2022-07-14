@@ -23,11 +23,11 @@ export default function Register() {
     confirmPassword: "",
   });
 
-  useEffect(() => {
-    if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
-      navigate("/");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
+  //     navigate("/");
+  //   }
+  // }, []);
 
   const handleChange = (event) => {
     setValues({ ...values, [event.target.name]: event.target.value });
@@ -90,7 +90,7 @@ export default function Register() {
         <form action="" onSubmit={(event) => handleSubmit(event)}>
           <div className="brand">
             <img src={Logo} alt="logo" />
-            <h1>snappy</h1>
+            <h1>ChatPot</h1>
           </div>
           <input
             type="text"
@@ -131,6 +131,7 @@ const FormContainer = styled.div`
   height: 100vh;
   width: 100vw;
   display: flex;
+   
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
